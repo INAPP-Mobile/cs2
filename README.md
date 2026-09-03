@@ -6,6 +6,13 @@ Counter-Strike 2 Dedicated Server — one-click deploy with persistent volume, C
 
 After deploying, open CS2 → Play → Community Server Browser → Add Server: `:27015`
 
+## System Requirements
+
+- **Disk:** 30GB+ dedicated volume (CS2 base install ~20GB, grows with maps/workshop content)
+- **Memory:** 2 GB RAM minimum (4 GB+ recommended for >10 players)
+- **Network:** UDP port 27015 (game), TCP port 27020 (CSTV, optional)
+- **Steam:** Valid Game Server Login Token required
+
 ## About Hosting
 
 This template runs a CS2 dedicated server wrapped around the upstream Docker image. Game data persists on a Railway volume mounted at `/home/steam/cs2-dedicated` — configs, maps, and logs survive deploys and restarts.
