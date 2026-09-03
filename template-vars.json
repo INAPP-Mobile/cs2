@@ -1,0 +1,40 @@
+{
+  "variables": [
+    {
+      "name": "SRCDS_TOKEN",
+      "defaultValue": "",
+      "description": "Steam Game Server Login Token (get from steamcommunity.com/dev/managegameservers)",
+      "isOptional": false
+    },
+    {
+      "name": "CS2_SERVERNAME",
+      "defaultValue": "cs2 private server",
+      "description": "Server hostname",
+      "isOptional": false
+    },
+    {
+      "name": "CS2_MAXPLAYERS",
+      "defaultValue": "10",
+      "description": "Max simultaneous players",
+      "isOptional": false
+    },
+    {
+      "name": "CS2_RCONPW",
+      "defaultValue": "changeme",
+      "description": "RCON password",
+      "isOptional": false
+    },
+    {
+      "name": "CS2_MAPGROUP",
+      "defaultValue": "mg_active",
+      "description": "Map group",
+      "isOptional": false
+    },
+    {
+      "name": "CS2_STARTMAP",
+      "defaultValue": "de_inferno",
+      "description": "Starting map",
+      "isOptional": false
+    }
+  ]
+}
