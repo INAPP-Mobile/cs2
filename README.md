@@ -4,7 +4,7 @@
 
 Counter-Strike 2 Dedicated Server — one-click deploy with persistent volume, CSTV support, and zero-downtime updates. Powered by [joedwards32/CS2](https://github.com/joedwards32/CS2).
 
-After deploying, open CS2 → Play → Community Server Browser → Add Server: `:27015`
+After deploying, open CS2 → Play → Community Server Browser → Add Server: `<your-railway-domain>:27015`
 
 ## System Requirements
 
@@ -42,27 +42,29 @@ Key environment variables:
 
 | Port | Protocol | Description |
 |------|----------|-------------|
-| 27015 | TCP/UDP | Game server |
+| 27015 | UDP | Game port |
+| 27015 | TCP | RCON (if enabled) |
 | 27020 | UDP | CSTV/SourceTV |
 
-## Storage
+## Why Deploy
 
-This template provisions a 30GB volume for game data. CS2 dedicated server requires ~20GB for the base install. Increase the volume size in `railway.json` if you plan to host custom maps or workshop content.
+- **Persistent game data**: configs, maps, and logs survive deploys via Railway volume
+- **Zero-downtime updates**: redeploy without losing server state
+- **SourceTV support**: broadcast matches with built-in CSTV
+- **Full config control**: 32+ env vars for maps, gamemodes, logging, and more
 
-## Configuration
+## Common Use Cases
 
-### Custom Config Bundle
+- Host a competitive CS2 server for ranked practice
+- Run a private community server with custom maps and mods
+- Set up a CSTV relay for tournament broadcasting
+- Test custom configs and gamemodes without local Docker setup
 
-Set `CS2_CFG_URL` to a `.zip`, `.tar.gz`, or `.tar` URL. The bundle is extracted into the game directory on startup.
+## Dependencies for
 
-### Workshop Maps (Experimental)
+This template has no external service dependencies — everything runs in a single container with a persistent volume.
 
-Set `CS2_HOST_WORKSHOP_COLLECTION` to a Workshop Collection ID. Maps can be selected via RCON:
-```
-ds_workshop_listmaps
-ds_workshop_changelevel $map_name
-```
+### Deployment Dependencies
 
-## License
-
-Counter-Strike is a trademark of Valve Corporation. This project is not affiliated with or endorsed by Valve.
+- A Railway account
+- A Steam Game Server Login Token (free from steamcommunity.com)

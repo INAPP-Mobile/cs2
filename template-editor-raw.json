@@ -1,148 +1,146 @@
 {
-  "cs2": {
-    "SRCDS_TOKEN": {
-      "value": "",
-      "description": "Steam Game Server Login Token (get from steamcommunity.com/dev/managegameservers)"
-    },
-    "CS2_SERVERNAME": {
-      "value": "cs2 private server",
-      "description": "Server hostname"
-    },
-    "CS2_MAXPLAYERS": {
-      "value": "10",
-      "description": "Max simultaneous players"
-    },
-    "CS2_RCONPW": {
-      "value": "changeme",
-      "description": "RCON password"
-    },
-    "CS2_MAPGROUP": {
-      "value": "mg_active",
-      "description": "Map group"
-    },
-    "CS2_STARTMAP": {
-      "value": "de_inferno",
-      "description": "Starting map"
-    },
-    "CS2_PORT": {
-      "value": "27015",
-      "description": "Game port"
-    },
-    "CS2_RCON_PORT": {
-      "value": "",
-      "description": "RCON port (optional)"
-    },
-    "CS2_GAMETYPE": {
-      "value": "0",
-      "description": "Game type (0=Competitive, 1=Casual)"
-    },
-    "CS2_GAMEMODE": {
-      "value": "1",
-      "description": "Game mode"
-    },
-    "CS2_LAN": {
-      "value": "0",
-      "description": "LAN mode (0=Internet, 1=LAN)"
-    },
-    "CS2_CHEATS": {
-      "value": "0",
-      "description": "Enable cheats (0=off, 1=on)"
-    },
-    "CS2_IP": {
-      "value": "0.0.0.0",
-      "description": "Bind IP"
-    },
-    "CS2_SERVER_HIBERNATE": {
-      "value": "0",
-      "description": "Hibernate when empty"
-    },
-    "CS2_GAMEALIAS": {
-      "value": "",
-      "description": "Game alias (optional)"
-    },
-    "CS2_SERVER_DELTATICKS_ENFORCE": {
-      "value": "2",
-      "description": "Delta ticks enforcement"
-    },
-    "CS2_LOG": {
-      "value": "on",
-      "description": "Enable logging"
-    },
-    "CS2_LOG_FILE": {
-      "value": "0",
-      "description": "Log to file"
-    },
-    "CS2_LOG_ECHO": {
-      "value": "0",
-      "description": "Log echo"
-    },
-    "CS2_LOG_MONEY": {
-      "value": "0",
-      "description": "Log money"
-    },
-    "CS2_LOG_DETAIL": {
-      "value": "0",
-      "description": "Log detail"
-    },
-    "CS2_LOG_ITEMS": {
-      "value": "0",
-      "description": "Log items"
-    },
-    "CS2_DISCONNECT_KILLS": {
-      "value": "0",
-      "description": "Disconnect kills"
-    },
-    "CS2_LOG_HTTP_URL": {
-      "value": "",
-      "description": "HTTP log URL (optional)"
-    },
-    "TV_AUTORECORD": {
-      "value": "0",
-      "description": "Auto-record demos"
-    },
-    "TV_ENABLE": {
-      "value": "0",
-      "description": "Enable SourceTV"
-    },
-    "TV_PORT": {
-      "value": "27020",
-      "description": "SourceTV port"
-    },
-    "TV_PW": {
-      "value": "changeme",
-      "description": "SourceTV password"
-    },
-    "TV_RELAY_PW": {
-      "value": "changeme",
-      "description": "SourceTV relay password"
-    },
-    "TV_MAXRATE": {
-      "value": "0",
-      "description": "Max rate"
-    },
-    "TV_DELAY": {
-      "value": "0",
-      "description": "Broadcast delay (seconds)"
-    },
-    "TV_RELAYVOICE": {
-      "value": "1",
-      "description": "Relay voice"
-    },
-    "CS2_HOST_WORKSHOP_MAP": {
-      "value": "",
-      "description": "Workshop map ID (optional)"
-    },
-    "CS2_HOST_WORKSHOP_COLLECTION": {
-      "value": "",
-      "description": "Workshop collection ID (optional)"
-    },
-    "CS2_CFG_URL": {
-      "value": "",
-      "description": "Custom config URL (optional)"
-    },
-    "CS2_ADDITIONAL_ARGS": {
-      "value": "",
-      "description": "Additional launch arguments (optional)"
-    }
+  "SRCDS_TOKEN": {
+    "value": "",
+    "description": "Steam Game Server Login Token (get from steamcommunity.com/dev/managegameservers)"
+  },
+  "CS2_SERVERNAME": {
+    "value": "cs2 private server",
+    "description": "Server hostname"
+  },
+  "CS2_MAXPLAYERS": {
+    "value": "10",
+    "description": "Max simultaneous players"
+  },
+  "CS2_RCONPW": {
+    "value": "changeme",
+    "description": "RCON password"
+  },
+  "CS2_MAPGROUP": {
+    "value": "mg_active",
+    "description": "Map group"
+  },
+  "CS2_STARTMAP": {
+    "value": "de_inferno",
+    "description": "Starting map"
+  },
+  "CS2_PORT": {
+    "value": "27015",
+    "description": "Game port"
+  },
+  "CS2_RCON_PORT": {
+    "value": "",
+    "description": "RCON port (optional)"
+  },
+  "CS2_GAMETYPE": {
+    "value": "0",
+    "description": "Game type (0=Competitive, 1=Casual)"
+  },
+  "CS2_GAMEMODE": {
+    "value": "1",
+    "description": "Game mode"
+  },
+  "CS2_LAN": {
+    "value": "0",
+    "description": "LAN mode (0=Internet, 1=LAN)"
+  },
+  "CS2_CHEATS": {
+    "value": "0",
+    "description": "Enable cheats (0=off, 1=on)"
+  },
+  "CS2_IP": {
+    "value": "0.0.0.0",
+    "description": "Bind IP"
+  },
+  "CS2_SERVER_HIBERNATE": {
+    "value": "0",
+    "description": "Hibernate when empty"
+  },
+  "CS2_GAMEALIAS": {
+    "value": "",
+    "description": "Game alias (optional)"
+  },
+  "CS2_SERVER_DELTATICKS_ENFORCE": {
+    "value": "2",
+    "description": "Delta ticks enforcement"
+  },
+  "CS2_LOG": {
+    "value": "on",
+    "description": "Enable logging"
+  },
+  "CS2_LOG_FILE": {
+    "value": "0",
+    "description": "Log to file"
+  },
+  "CS2_LOG_ECHO": {
+    "value": "0",
+    "description": "Log echo"
+  },
+  "CS2_LOG_MONEY": {
+    "value": "0",
+    "description": "Log money"
+  },
+  "CS2_LOG_DETAIL": {
+    "value": "0",
+    "description": "Log detail"
+  },
+  "CS2_LOG_ITEMS": {
+    "value": "0",
+    "description": "Log items"
+  },
+  "CS2_DISCONNECT_KILLS": {
+    "value": "0",
+    "description": "Disconnect kills"
+  },
+  "CS2_LOG_HTTP_URL": {
+    "value": "",
+    "description": "HTTP log URL (optional)"
+  },
+  "TV_AUTORECORD": {
+    "value": "0",
+    "description": "Auto-record demos"
+  },
+  "TV_ENABLE": {
+    "value": "0",
+    "description": "Enable SourceTV"
+  },
+  "TV_PORT": {
+    "value": "27020",
+    "description": "SourceTV port"
+  },
+  "TV_PW": {
+    "value": "changeme",
+    "description": "SourceTV password"
+  },
+  "TV_RELAY_PW": {
+    "value": "changeme",
+    "description": "SourceTV relay password"
+  },
+  "TV_MAXRATE": {
+    "value": "0",
+    "description": "Max rate"
+  },
+  "TV_DELAY": {
+    "value": "0",
+    "description": "Broadcast delay (seconds)"
+  },
+  "TV_RELAYVOICE": {
+    "value": "1",
+    "description": "Relay voice"
+  },
+  "CS2_HOST_WORKSHOP_MAP": {
+    "value": "",
+    "description": "Workshop map ID (optional)"
+  },
+  "CS2_HOST_WORKSHOP_COLLECTION": {
+    "value": "",
+    "description": "Workshop collection ID (optional)"
+  },
+  "CS2_CFG_URL": {
+    "value": "",
+    "description": "Custom config URL (optional)"
+  },
+  "CS2_ADDITIONAL_ARGS": {
+    "value": "",
+    "description": "Additional launch arguments (optional)"
   }
 }
