@@ -1,0 +1,6 @@
+{
+  "SECRET_KEY": {
+    "value": "",
+    "description": "REQUIRED. Playit.gg agent secret key. Create a free account at playit.gg, then Account → Agents → Add Agent → copy the secret key. After deploy, configure the tunnel in the playit.gg dashboard: type UDP, local address cs2.railway.internal, local port 27015 (add a second UDP tunnel on port 27020 if CSTV is enabled)."
+  }
+}

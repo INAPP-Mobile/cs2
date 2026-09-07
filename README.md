@@ -4,7 +4,7 @@
 
 Counter-Strike 2 Dedicated Server — one-click deploy with persistent volume, CSTV support, and zero-downtime updates. Powered by [joedwards32/CS2](https://github.com/joedwards32/CS2).
 
-After deploying, open CS2 → Play → Community Server Browser → Add Server: `<your-railway-domain>:27015`
+After deploying and completing the [playit.gg setup](#connecting-players-udp-via-playitgg), open CS2 → Play → Community Server Browser → Add Server: `<your-playit-allocation-address>` (the IP:port playit.gg assigns).
 
 ## System Requirements
 
@@ -38,13 +38,34 @@ Key environment variables:
 | `TV_ENABLE` | `0` | Enable CSTV/SourceTV (0=off, 1=on) |
 | `TV_PORT` | `27020` | CSTV port |
 
+## Connecting Players (UDP via playit.gg)
+
+Railway's public network only exposes TCP/HTTP — CS2's game traffic is UDP, so players connect through the bundled `playit` tunnel agent instead of the Railway domain.
+
+The template deploys two services:
+
+- **cs2** — the game server (UDP :27015 game, UDP :27020 CSTV, TCP :27015 RCON, persistent volume)
+- **playit** — the [playit.gg](https://playit.gg) agent, which makes outbound connections to playit.gg's edge and tunnels player traffic over Railway's private network to `cs2.railway.internal:27015`
+
+### One-time setup (after deploy)
+
+1. Create a free account at [playit.gg](https://playit.gg)
+2. Account → Agents → **Add Agent** → copy the **secret key**
+3. In Railway, open the `playit` service → Variables → paste the key as `SECRET_KEY`
+4. In playit.gg → Tunnels → **Add Tunnel**:
+   - Type: **UDP**
+   - Local address: `cs2.railway.internal`
+   - Local port: `27015`
+5. If you enabled CSTV (`TV_ENABLE=1`), add a second tunnel the same way with local port `27020`
+6. Give players the allocation address playit.gg assigns — they add it in CS2 → Play → Community Server Browser → Add Server
+
 ## Ports
 
 | Port | Protocol | Description |
 |------|----------|-------------|
-| 27015 | UDP | Game port |
-| 27015 | TCP | RCON (if enabled) |
-| 27020 | UDP | CSTV/SourceTV |
+| 27015 | UDP | Game port (via playit.gg tunnel) |
+| 27015 | TCP | RCON (if enabled, via Railway TCP proxy) |
+| 27020 | UDP | CSTV/SourceTV (via second playit.gg tunnel) |
 
 ## Why Deploy
 
@@ -62,9 +83,8 @@ Key environment variables:
 
 ## Dependencies for
 
-This template has no external service dependencies — everything runs in a single container with a persistent volume.
-
 ### Deployment Dependencies
 
 - A Railway account
 - A Steam Game Server Login Token (free from steamcommunity.com)
+- A free [playit.gg](https://playit.gg) account (for the UDP game tunnel — required for players to connect)
