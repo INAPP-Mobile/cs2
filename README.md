@@ -4,7 +4,7 @@
 
 Counter-Strike 2 Dedicated Server — one-click deploy with persistent volume, CSTV support, and zero-downtime updates. Powered by [joedwards32/CS2](https://github.com/joedwards32/CS2).
 
-After deploying and completing the [playit.gg setup](#connecting-players-udp-via-playitgg), open CS2 → Play → Community Server Browser → Add Server: `<your-playit-allocation-address>` (the IP:port playit.gg assigns).
+After deploying and completing the [playit.gg setup](#connecting-players-udp-via-playitgg), open CS2 → Play → Community Server Browser → Add Server: `{your-playit-allocation-address}` (the IP:port playit.gg assigns).
 
 ## System Requirements
 
