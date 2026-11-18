@@ -1,4 +1,4 @@
-FROM joedwards32/cs2:latest
+FROM joedwards32/cs2:5.0.1
 
 # Switch to root for Railway volume chown
 USER root
